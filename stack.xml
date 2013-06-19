@@ -1,0 +1,9 @@
+<stack>
+  <description brief="calvin_navigation">calvin_navigation</description>
+  <author>Martin Günther</author>
+  <license>BSD</license>  
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/calvin_navigation</url>
+  <depend stack="ros" />
+
+</stack>

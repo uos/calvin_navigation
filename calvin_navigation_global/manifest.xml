@@ -1,0 +1,14 @@
+<package>
+  <description brief="calvin_navigation_global">
+
+     calvin_navigation_global
+
+  </description>
+  <author>pdc</author>
+  <license>BSD</license>
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/calvin_navigation_global</url>
+
+</package>
+
+

@@ -1,0 +1,15 @@
+<package>
+  <description brief="calvin_2dnav">
+
+     calvin_2dnav
+
+  </description>
+  <author>pdc</author>
+  <license>BSD</license>
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/calvin_2dnav</url>
+  <depend package="move_base"/>
+
+</package>
+
+

@@ -1,4 +1,6 @@
 <launch>
-  <include file="$(find calvin_gazebo)/launch/calvin_empty_world.launch" />
+  <include file="$(find calvin_gazebo)/launch/calvin_wg_world.launch" />
   <include file="$(find calvin_navigation_global)/move_base.xml" />
+  <include file="$(find calvin_navigation_global)/amcl_node.xml" />
+  <node name="map_server" pkg="map_server" type="map_server" args="$(find uos_maps)/maps/avz5floor_gazebo.yaml" output="screen" /> 
 </launch>

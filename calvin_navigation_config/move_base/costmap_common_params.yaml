@@ -4,6 +4,8 @@ raytrace_range: 3.0
 footprint: [[0.34,0.25],[-0.34,0.25],[-0.34,-0.25],[0.34,-0.25]]
 inflation_radius: 0.45
 
-observation_sources: scan
+observation_sources: scan, scan_filtered
 
-scan: {data_type: LaserScan, topic: scan_median_filtered, expected_update_rate: 0.15, marking: true, clearing: true}
+scan: {data_type: LaserScan, topic: scan, expected_update_rate: 0.15, marking: false, clearing: true}
+
+scan_filtered: {data_type: LaserScan, topic: scan_filtered, expected update_rate: 0.15, marking: true, clearing: false}

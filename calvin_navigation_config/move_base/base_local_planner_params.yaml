@@ -5,7 +5,7 @@ TrajectoryPlannerROS:
   min_in_place_rotational_vel: 0.4
   acc_lim_th: 0.61
   acc_lim_x: 0.135
-  acc_lim_y: 0.50
+  acc_lim_y: 0.00
 
   holonomic_robot: false
   yaw_goal_tolerance: 0.3

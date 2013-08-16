@@ -3,8 +3,8 @@ TrajectoryPlannerROS:
   min_vel_x: 0.10
   max_rotational_vel: 0.86
   min_in_place_rotational_vel: 0.4
-  acc_lim_th: 0.61
-  acc_lim_x: 0.135
+  acc_lim_th: 2.42
+  acc_lim_x: 0.56
   acc_lim_y: 0.00
 
   holonomic_robot: false
@@ -16,6 +16,28 @@ TrajectoryPlannerROS:
   heading_lookahead: 0.325
   oscillation_reset_dist: 0.05
 
-  vx_samples: 6
+  vx_samples: 8
   vtheta_samples: 20
   dwa: false
+
+#DWAPlannerROS:
+#  acc_lim_x: 0.56
+#  acc_lim_y: 0.0
+#  acc_lim_th: 2.42
+#  max_trans_vel: 0.45
+#  min_trans_vel: 0.10
+#  max_vel_x: 0.45
+#  min_vel_x: 0.10
+#  max_vel_y: 0.0
+#  min_vel_y: 0.0
+#  max_rot_vel: 0.86
+#  min_rot_vel: 0.4
+
+#  yaw_goal_tolerance: 0.3
+#  xy_goal_tolerance: 0.15
+#  sim_time: 1.5
+#  vx_samples: 8
+#  vy_samples: 0
+#  vtheta_samples: 20
+#  penalize_negative_x: true
+  

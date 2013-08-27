@@ -1,6 +1,7 @@
 <?xml version="1.0"?>
 <launch>
   <include file="$(find calvin_bringup)/launch/calvin.launch" />
+  <include file="$(find calvin_2dnav)/launch/map_server.launch" />
   <include file="$(find calvin_navigation_global)/amcl_node.xml" />
   <include file="$(find calvin_navigation_global)/move_base.xml" />
 </launch>

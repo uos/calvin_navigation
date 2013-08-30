@@ -10,13 +10,13 @@ recovery_behaviors:
   - name: 'rotate_recovery'
     type: 'rotate_recovery/RotateRecovery'
 super_conservative_reset:
-  reset_distance: 5.0
-
-conservative_reset:
   reset_distance: 3.0
 
+conservative_reset:
+  reset_distance: 1.5
+
 aggressive_reset:
-  reset_distance: 1.84
+  reset_distance: 0.5
 
 move_slow_and_clear:
   clearing_distance: 0.5

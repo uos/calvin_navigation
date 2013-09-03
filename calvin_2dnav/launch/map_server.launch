@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <launch>
-  <node name="map_server" pkg="map_server" type="map_server" output="screen" args="$(find calvin_2dnav)/maps/avz3floor_pg2elevator_v2.yaml" >
+  <node name="map_server" pkg="map_server" type="map_server" output="screen" args="$(find calvin_2dnav)/maps/avz3floor_pg2elevator_v3.yaml" >
     <param name="frame_id" value="/map"/> 
   </node> 
   <!--node name="map_server" pkg="map_server" type="map_server" output="screen" args="$(find calvin_2dnav)/maps/map.yaml" >

@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<launch>
+  <include file="$(find calvin_gazebo)/launch/calvin_avz_world.launch" />
+
+  <include file="$(find calvin_2dnav)/launch/calvin_2dnav.launch">
+    <arg name="mapmetafile" value="$(find uos_maps)/maps/avz5floor_gazebo.yaml"/>
+  </include>
+</launch>

@@ -54,21 +54,48 @@ class MapServer
     /** Trivial constructor */
     MapServer(const std::string& fname, double res)
     {
+      private_nh = ros::NodeHandle("~");
+      private_nh.param("frame_id", frame_id, std::string("map"));
+      //
+      // Latched publisher for metadata
+      metadata_pub= n.advertise<nav_msgs::MapMetaData>("map_metadata", 1, true);
+
+      // Latched publisher for data
+      map_pub = n.advertise<nav_msgs::OccupancyGrid>("map", 1, true);
+
+      loadMap(fname, res);
+
+      getmapservice = n.advertiseService("static_map", &MapServer::getMapCallback, this);
+      //pub = n.advertise<nav_msgs::MapMetaData>("map_metadata", 1,
+
+      loadmapservice = n.advertiseService("load_map", &MapServer::loadMapCallback, this);
+
+    }
+
+  private:
+    ros::NodeHandle n;
+    ros::NodeHandle private_nh;
+    ros::Publisher map_pub;
+    ros::Publisher metadata_pub;
+    ros::ServiceServer getmapservice;
+    ros::ServiceServer loadmapservice;
+    bool deprecated;
+    std::string frame_id;
+
+    void loadMap(const std::string& fname, double res) {
       std::string mapfname = "";
       double origin[3];
       int negate;
       double occ_th, free_th;
-      std::string frame_id;
-      ros::NodeHandle private_nh("~");
-      private_nh.param("frame_id", frame_id, std::string("map"));
+
       deprecated = (res != 0);
+
       if (!deprecated) {
         //mapfname = fname + ".pgm";
         //std::ifstream fin((fname + ".yaml").c_str());
         std::ifstream fin(fname.c_str());
         if (fin.fail()) {
           ROS_ERROR("Map_server could not open %s.", fname.c_str());
-          exit(-1);
         }
         YAML::Parser parser(fin);
         YAML::Node doc;
@@ -148,27 +175,12 @@ class MapServer
                map_resp_.map.info.resolution);
       meta_data_message_ = map_resp_.map.info;
 
-      service = n.advertiseService("static_map", &MapServer::mapCallback, this);
-      //pub = n.advertise<nav_msgs::MapMetaData>("map_metadata", 1,
-
-      // Latched publisher for metadata
-      metadata_pub= n.advertise<nav_msgs::MapMetaData>("map_metadata", 1, true);
       metadata_pub.publish( meta_data_message_ );
-
-      // Latched publisher for data
-      map_pub = n.advertise<nav_msgs::OccupancyGrid>("map", 1, true);
       map_pub.publish( map_resp_.map );
     }
 
-  private:
-    ros::NodeHandle n;
-    ros::Publisher map_pub;
-    ros::Publisher metadata_pub;
-    ros::ServiceServer service;
-    bool deprecated;
-
     /** Callback invoked when someone requests our getmap service */
-    bool mapCallback(nav_msgs::GetMap::Request  &req,
+    bool getMapCallback(nav_msgs::GetMap::Request  &req,
                      nav_msgs::GetMap::Response &res )
     {
       // request is empty; we ignore it
@@ -184,7 +196,9 @@ class MapServer
     bool loadMapCallback(map_server::LoadMap::Request &req,
                      map_server::LoadMap::Response &res )
     {
-      ROS_INFO("Loading new map: %s %s", req.mapfile.c_str(), req.mapmetafile.c_str());
+      ROS_INFO("Loading new map: %s", req.mapmetafile.c_str());
+
+      loadMap(req.mapmetafile, 0);
 
       return true;
     }

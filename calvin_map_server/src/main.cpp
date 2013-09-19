@@ -44,6 +44,7 @@
 #include "ros/console.h"
 #include "map_server/image_loader.h"
 #include "nav_msgs/MapMetaData.h"
+#include "map_server/LoadMap.h"
 #include "yaml-cpp/yaml.h"
 
 class MapServer
@@ -160,7 +161,7 @@ class MapServer
     ros::ServiceServer service;
     bool deprecated;
 
-    /** Callback invoked when someone requests our service */
+    /** Callback invoked when someone requests our getmap service */
     bool mapCallback(nav_msgs::GetMap::Request  &req,
                      nav_msgs::GetMap::Response &res )
     {
@@ -169,6 +170,15 @@ class MapServer
       // = operator is overloaded to make deep copy (tricky!)
       res = map_resp_;
       ROS_INFO("Sending map");
+
+      return true;
+    }
+
+    /** Callback invoked when someone requests to load a different map */
+    bool loadMapCallback(map_server::LoadMap::Request &req,
+                     map_server::LoadMap::Response &res )
+    {
+      ROS_INFO("Loading new map: %s %s", req.mapfile.c_str(), req.mapmetafile.c_str());
 
       return true;
     }

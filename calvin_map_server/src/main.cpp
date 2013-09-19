@@ -39,6 +39,7 @@
 #include <stdlib.h>
 #include <libgen.h>
 #include <fstream>
+#include <stdexcept>
 
 #include "ros/ros.h"
 #include "ros/console.h"
@@ -132,7 +133,12 @@ class MapServer
       }
 
       ROS_INFO("Loading map from image \"%s\"", mapfname.c_str());
-      map_server::loadMapFromFile(&map_resp_,mapfname.c_str(),res,negate,occ_th,free_th, origin);
+      try {
+        map_server::loadMapFromFile(&map_resp_,mapfname.c_str(),res,negate,occ_th,free_th, origin);
+      }
+      catch (std::exception &e) {
+        ROS_ERROR("LoadMapFromFile Exception: %s", e.what());
+      }
       map_resp_.map.info.map_load_time = ros::Time::now();
       map_resp_.map.header.frame_id = frame_id;
       map_resp_.map.header.stamp = ros::Time::now();

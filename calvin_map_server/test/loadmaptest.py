@@ -1,10 +1,10 @@
 #!/usr/bin/env python
-import roslib; roslib.load_manifest('map_server')
+import roslib; roslib.load_manifest('calvin_map_server')
 
 import sys
 
 import rospy
-from map_server.srv import *
+from calvin_map_server.srv import *
 
 def usage():
     return "%s yamlfile"%sys.argv[0]

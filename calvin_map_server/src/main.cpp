@@ -43,9 +43,9 @@
 
 #include "ros/ros.h"
 #include "ros/console.h"
-#include "map_server/image_loader.h"
+#include "calvin_map_server/image_loader.h"
 #include "nav_msgs/MapMetaData.h"
-#include "map_server/LoadMap.h"
+#include "calvin_map_server/LoadMap.h"
 #include "yaml-cpp/yaml.h"
 
 class MapServer
@@ -193,8 +193,8 @@ class MapServer
     }
 
     /** Callback invoked when someone requests to load a different map */
-    bool loadMapCallback(map_server::LoadMap::Request &req,
-                     map_server::LoadMap::Response &res )
+    bool loadMapCallback(calvin_map_server::LoadMap::Request &req,
+                     calvin_map_server::LoadMap::Response &res )
     {
       ROS_INFO("Loading new map: %s", req.mapmetafile.c_str());
 

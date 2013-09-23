@@ -31,7 +31,7 @@
 
 #include <stdexcept> // for std::runtime_error
 #include <gtest/gtest.h>
-#include "map_server/image_loader.h"
+#include "calvin_map_server/image_loader.h"
 #include "test_constants.h"
 
 /* Try to load a valid PNG file.  Succeeds if no exception is thrown, and if

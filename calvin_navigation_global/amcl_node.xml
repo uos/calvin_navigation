@@ -1,5 +1,5 @@
 <launch>
-<node pkg="amcl" type="amcl" name="amcl">
+<node pkg="amcl" type="amcl" name="amcl" output="screen">
   <remap from="scan" to="scan_filtered" />
   <!-- Publish scans from best pose at a max of 10 Hz -->
   <param name="base_frame_id" value="base_footprint"/>

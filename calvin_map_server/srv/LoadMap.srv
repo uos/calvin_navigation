@@ -1,0 +1,4 @@
+#path to .yaml file
+string mapmetafile
+---
+string response

@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<launch>
+  <!-- path to map meta file (.yaml) -->
+  <include file="$(find calvin_map_server)/launch/calvin_map_server.launch">
+    <arg name="mapmetafile" value="$(find calvin_2dnav)/maps/avz3floor_complete.yaml"/>
+  </include>
+
+</launch>

@@ -1,0 +1,15 @@
+<package>
+  <description brief="calvin_navigation_slam">
+
+     calvin_navigation_slam
+
+  </description>
+  <author>ms maa</author>
+  <license>BSD</license>
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/calvin_navigation_slam</url>
+  <depend package="move_base"/>
+
+</package>
+
+

@@ -1,0 +1,4 @@
+<launch>
+  <include file="$(find calvin_navigation_slam)/slam_gmapping.xml" />
+  <include file="$(find calvin_navigation_slam)/move_base.xml" />
+</launch>

@@ -6,10 +6,6 @@ inflation_radius: 0.45
 
 observation_sources: scan scan_filtered lms200 lms200_scan_filtered
 
-scan: {data_type: LaserScan, topic: scan, expected_update_rate: 0.15, marking: false, clearing: true}
-
-scan_filtered: {data_type: LaserScan, topic: scan_filtered, expected_update_rate: 0.15, marking: true, clearing: false}
-
 lms200: {data_type: LaserScan, topic: lms200, expected_update_rate: 0.1, marking: false, clearing: true}
 
 lms200_scan_filtered: {data_type: LaserScan, topic: lms200_scan_filtered, expected_update_rate: 0.1, marking: true, clearing: false}

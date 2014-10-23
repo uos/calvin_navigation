@@ -1,4 +1,0 @@
-<launch>
-  <include file="$(find calvin_bringup)/launch/calvin.launch" />
-  <include file="$(find calvin_navigation_slam)/slam_gmapping.xml" />
-</launch>

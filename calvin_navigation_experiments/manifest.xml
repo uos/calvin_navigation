@@ -1,0 +1,15 @@
+<package>
+  <description brief="calvin_navigation_experiments">
+    This package contains high-level launch files to call Calvin's navigation behaviors in different environments.
+  </description>
+  <author>Andre Potenza, Michael Stypa, Michael Görner, Henning Deeken</author>
+  <maintainer email="hdeeken@uni-osnabrueck.de">Henning Deeken</maintainer>
+  <license>BSD</license>
+  <review status="unreviewed" notes=""/>
+  <url>http://ros.org/wiki/calvin_navigation_experiments</url>
+
+  <depend package="calvin_bringup"/>
+  <depend package="calvin_gazebo"/>
+  <depend package="calvin_navigation"/>
+
+</package>

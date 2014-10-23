@@ -13,6 +13,9 @@
   <depend package="rospy" />
   <depend package="nav_msgs"/>
   <depend package="tf"/>
+  <depend package="calvin_navigation"/>
+  <depend package="calvin_navigation_experiments"/>
+
   <export>
      <cpp cflags="-I${prefix}/include `rosboost-cfg -m x86_64-linux-gnu --cflags`" lflags="-Wl,-rpath,${prefix}/lib -L${prefix}/lib `rosboost-cfg -m x86_64-linux-gnu --lflags thread`"/>
   </export>
@@ -21,7 +24,6 @@
   <rosdep name="python-yaml"/>
   <rosdep name="yaml-cpp" />
   <rosdep name="sdl-image" />
-
 
   <platform os="ubuntu" version="9.04"/>
   <platform os="ubuntu" version="9.10"/>

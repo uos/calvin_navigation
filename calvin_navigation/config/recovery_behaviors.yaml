@@ -1,0 +1,42 @@
+recovery_behaviors:
+  - name: 'super_conservative_reset'
+    type: 'clear_costmap_recovery/ClearCostmapRecovery'
+  - name: 'conservative_reset'
+    type: 'clear_costmap_recovery/ClearCostmapRecovery'
+  - name: 'aggressive_reset'
+    type: 'clear_costmap_recovery/ClearCostmapRecovery'
+#  - name: 'move_slow_and_clear'
+#    type: 'move_slow_and_clear/MoveSlowAndClear'
+  - name: 'rotate_recovery'
+    type: 'rotate_recovery/RotateRecovery'
+
+super_conservative_reset:
+  reset_distance: 3.0
+
+conservative_reset:
+  reset_distance: 1.5
+
+aggressive_reset:
+  reset_distance: 0.5
+
+move_slow_and_clear:
+  clearing_distance: 0.5
+  limited_trans_speed: 0.25
+  limited_rot_speed: 0.45
+  limited_distance: 0.3
+
+rotate_recovery:
+  sim_granularity: 0.017
+  frequency: 20.0
+
+##gmapping's move_base used - useful?
+#recovery_behaviors: [{name: conservative_clear, type: clear_costmap_recovery/ClearCostmapRecovery}, {name: aggressive_clear, type: clear_costmap_recovery/ClearCostmapRecovery}]
+
+#NavfnROS:
+#  allow_unknown: false
+
+#conservative_clear:
+#  reset_distance: 3.0
+
+#aggressive_clear:
+#  reset_distance: 1.84

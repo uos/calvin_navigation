@@ -2,7 +2,7 @@
 <launch>
   <!-- path to map meta file (.yaml) -->
   <include file="$(find calvin_map_server)/launch/calvin_map_server.launch">
-    <arg name="mapmetafile" value="$(find calvin_2dnav)/maps/avz3floor_complete.yaml"/>
+    <arg name="mapmetafile" value="$(find calvin_navigation_experiments)/maps/avz3floor_complete.yaml"/>
   </include>
 
 </launch>

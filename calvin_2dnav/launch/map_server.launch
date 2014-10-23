@@ -1,8 +1,0 @@
-<?xml version="1.0"?>
-<launch>
-  <arg name="mapmetafile"/>
-
-  <node name="map_server" pkg="calvin_map_server" type="map_server" output="screen" args="$(arg mapmetafile)" >
-    <param name="frame_id" value="/map"/>
-  </node>
-</launch>

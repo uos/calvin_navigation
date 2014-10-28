@@ -8,3 +8,13 @@ lib/
 msg_gen/
 srv_gen/
 *.pyc
+*.bak
+*.swp
+*/msg/*Feedback.msg
+*/msg/*Goal.msg
+*/msg/*Action.msg
+*/msg/*Result.msg
+*/src/*/cfg
+*/src/*/msg
+*/src/*/srv
+calvin_map_server/src/calvin_map_server/__init__.py

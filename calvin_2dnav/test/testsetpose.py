@@ -6,7 +6,7 @@ import random
 
 if __name__ == '__main__':
   try:
-    pub = rospy.Publisher('/initialpose', PoseWithCovarianceStamped)
+    pub = rospy.Publisher('/initialpose', PoseWithCovarianceStamped, queue_size=10)
     rospy.init_node('setposeestimate')
     pose = PoseWithCovarianceStamped()
     pose.header.frame_id = "/map"

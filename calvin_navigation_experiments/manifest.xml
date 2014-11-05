@@ -8,8 +8,6 @@
   <review status="unreviewed" notes=""/>
   <url>http://ros.org/wiki/calvin_navigation_experiments</url>
 
-  <depend package="calvin_bringup"/>
-  <depend package="calvin_gazebo"/>
   <depend package="calvin_navigation"/>
 
 </package>

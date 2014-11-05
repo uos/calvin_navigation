@@ -1,5 +1,0 @@
-<?xml version="1.0"?>
-<launch>
-  <include file="$(find calvin_gazebo)/launch/calvin_avz_world.launch" />
-  <include file="$(find calvin_navigation)/launch/slam.launch" />
-</launch>

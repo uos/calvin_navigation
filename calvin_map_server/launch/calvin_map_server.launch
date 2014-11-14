@@ -1,8 +1,0 @@
-<?xml version="1.0"?>
-<launch>
-  <!-- path to map meta file (.yaml) -->
-  <arg name="mapmetafile"/>
-  <node name="map_server" pkg="calvin_map_server" type="map_server" output="screen" args="$(arg mapmetafile)"/>
-  <include file="$(find calvin_navigation)/launch/components/amcl.launch" />
-  <include file="$(find calvin_navigation)/launch/components/move_base.launch" />
-</launch>

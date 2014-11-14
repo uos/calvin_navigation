@@ -14,4 +14,4 @@ lms200: {data_type: LaserScan, topic: lms200, expected_update_rate: 0.1, marking
 
 lms200_scan_filtered: {data_type: LaserScan, topic: lms200_scan_filtered, expected_update_rate: 0.1, marking: true, clearing: false}
 
-kinect: {data_type: PointCloud2, topic: kinect/depth_registered/points_filtered_cut_floor, expected_update_rate: 0.4, marking: true, clearing: true}
+kinect: {data_type: PointCloud2, topic: kinect/depth_registered/points_filtered_cut_floor, expected_update_rate: 0.7, marking: true, clearing: true}

@@ -8,9 +8,10 @@
   <node pkg="move_base" type="move_base" name="move_base_node" output="screen">
     <remap from="map" to="$(arg map_topic)"/>
 
+    <param name="base_local_planner" value="dwa_local_planner/DWAPlannerROS" />
     <!-- Load common configuration files -->
     <rosparam file="$(find calvin_navigation)/config/move_base_params.yaml" command="load" />
-    <rosparam file="$(find calvin_navigation)/config/base_local_planner_params.yaml" command="load" />
+    <rosparam file="$(find calvin_navigation)/config/dwa_local_planner_params.yaml" command="load"/>
     <rosparam file="$(find calvin_navigation)/config/recovery_behaviors.yaml" command="load" />
 
     <!-- Load local and global navigation specific parameters -->

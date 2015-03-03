@@ -15,8 +15,11 @@
 
     <!-- Load local and global navigation specific parameters -->
     <rosparam file="$(find calvin_navigation)/config/common_costmap_params.yaml" command="load" ns="local_costmap" />
+
     <rosparam file="$(find calvin_navigation)/config/local_costmap_params.yaml" command="load" />
+
     <rosparam file="$(find calvin_navigation)/config/common_costmap_params.yaml" command="load" ns="global_costmap" />
+
     <rosparam file="$(find calvin_navigation)/config/global_costmap_params.yaml" command="load" />
   </node>
 </launch>

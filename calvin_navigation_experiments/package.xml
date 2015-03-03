@@ -8,6 +8,7 @@
   <url>http://ros.org/wiki/calvin_navigation_experiments</url>
 
   <build_depend>calvin_navigation</build_depend>
+
   <run_depend>calvin_navigation</run_depend>
 
   <buildtool_depend>catkin</buildtool_depend>

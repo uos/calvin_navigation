@@ -1,9 +1,10 @@
 <package>
   <name>calvin_navigation_experiments</name>
   <version>0.0.1</version>
-  <description>This package contains high-level launch files to call Calvin's navigation behaviors in different environments.</description>
+  <description>Launch files to call Calvin's navigation behaviors in different environments.</description>
+
   <author>Andre Potenza, Michael Stypa, Michael Görner, Henning Deeken</author>
-  <maintainer email="hdeeken@uni-osnabrueck.de">Henning Deeken</maintainer>
+  <maintainer email="mgoerner@uni-osnabrueck.de"> Michael Görner</maintainer>
   <license>BSD</license>
   <url>http://ros.org/wiki/calvin_navigation_experiments</url>
 

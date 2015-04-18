@@ -4,5 +4,5 @@
       <arg name="loc_mapmetafile" value="$(find calvin_navigation_experiments)/maps/avz3floor_loc_339.yaml" />
       <arg name="nav_mapmetafile" value="$(find calvin_navigation_experiments)/maps/avz3floor_nav_339.yaml" />
   </include>
-  <param name="home" type="str" value="map,-0.628996,-2.01269,0,0,0,0.982936,0.183947" />
+  <param name="home" type="str" value="map,-0.20,0,0,0,0,0,1" />
 </launch>

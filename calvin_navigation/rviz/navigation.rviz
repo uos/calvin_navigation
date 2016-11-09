@@ -6,11 +6,7 @@ Panels:
       Expanded:
         - /TF1/Frames1
         - /TF1/Tree1
-        - /Global Map1/Costmap1
-        - /Global Map1/Planner1
-        - /Local Map1/Costmap1
-        - /Local Map1/Planner1
-        - /Local Map1/Trajectory Cloud1
+        - /Local Planning1/Cost Cloud1
       Splitter Ratio: 0.5
     Tree Height: 742
   - Class: rviz/Selection
@@ -340,7 +336,7 @@ Visualization Manager:
           Unreliable: false
           Value: true
       Enabled: true
-      Name: Global Map
+      Name: Global Planning
     - Class: rviz/Group
       Displays:
         - Alpha: 0.7
@@ -374,7 +370,7 @@ Visualization Manager:
           Topic: /move_base/DWAPlannerROS/local_plan
           Unreliable: false
           Value: true
-        - Alpha: 0.8
+        - Alpha: 0.3
           Autocompute Intensity Bounds: true
           Autocompute Value Bounds:
             Max Value: 10
@@ -399,7 +395,7 @@ Visualization Manager:
           Size (Pixels): 3
           Size (m): 0.04
           Style: Flat Squares
-          Topic: /move_base/DWAPlannerROS/cost_cloud
+          Topic: /move_base_node/DWAPlannerROS/cost_cloud
           Unreliable: false
           Use Fixed Frame: true
           Use rainbow: true
@@ -429,13 +425,13 @@ Visualization Manager:
           Size (Pixels): 3
           Size (m): 0.04
           Style: Flat Squares
-          Topic: /move_base/DWAPlannerROS/trajectory_cloud
+          Topic: /move_base_node/DWAPlannerROS/trajectory_cloud
           Unreliable: false
           Use Fixed Frame: true
           Use rainbow: false
           Value: true
       Enabled: true
-      Name: Local Map
+      Name: Local Planning
     - Arrow Length: 0.2
       Class: rviz/PoseArray
       Color: 0; 192; 0
@@ -554,7 +550,7 @@ Visualization Manager:
       Name: Current View
       Near Clip Distance: 0.01
       Pitch: 0.785398
-      Target Frame: <Fixed Frame>
+      Target Frame: base_link
       Value: Orbit (rviz)
       Yaw: 0.785398
     Saved: ~
